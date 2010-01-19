@@ -1,4 +1,4 @@
-=== fw-post-image ===
+=== fw-vimeo-videowall ===
 Contributors: fairweb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=11221214
 Tags: video, vimeo, videowall, video widget, video thumbnail
