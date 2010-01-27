@@ -1,5 +1,5 @@
 jQuery(document).ready( function() {
-        jQuery("div.fwvvw_vthumb").livequery('click',
+        jQuery(".fwvvw_vthumb").livequery('click',
 		function() { 
 			var idreq = jQuery(this).attr('id');
                          jQuery("#fwvvw_full_video").remove();

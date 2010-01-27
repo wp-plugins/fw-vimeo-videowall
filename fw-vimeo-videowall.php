@@ -1,14 +1,14 @@
 <?php /**
  * @package fw-vimeo-videowall
  * @author fairweb
- * @version 1.0
+ * @version 1.1
  */
 /*
 Plugin Name: fw-vimeo-videowall
 Plugin URI: http://www.fairweb.fr/en/my-wordpress-plugins/fw-vimeo-videowall/
 Description: Displays a user, group, album or channel vimeo videowall with thumbnails or small videos in sidebar or content.
 Author: fairweb
-Version: 1.0
+Version: 1.1
 Author URI: http://www.fairweb.fr/
 */
 
@@ -56,7 +56,7 @@ function fw_vimeowall_styles() {
 
         if (file_exists(get_bloginfo('template_directory').'/fw-vimeo-videowall.css')) {
             $plugincss_url = get_bloginfo('template_directory').'/fw-vimeo-videowall.css';
-            $plugincss_file = FWVVW_DIR . '/fw-vimeo-videowall.css';
+            $plugincss_file = TEMPLATEPATH . '/fw-vimeo-videowall.css';
         } else {
             $plugincss_url = FWVVW_URL. '/fw-vimeo-videowall.css';
             $plugincss_file = FWVVW_DIR . '/fw-vimeo-videowall.css';

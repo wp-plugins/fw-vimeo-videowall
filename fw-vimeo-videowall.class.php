@@ -2,7 +2,7 @@
 /**
  * @package fw-vimeo-videowall
  * @author fairweb
- * @version 1.0
+ * @version 1.1
  */
 
 /**
@@ -50,7 +50,11 @@ class FW_vimeo_videowall {
         $this->choose_endpoint ();
         $video_details = $this->get_datas();
 
-        $html='<div class="fwvvw-'.$this->vsource.'">';
+        if ($this->vtype == 'title' && $video_details) {
+            $html ='<ul class="fwvvw-'.$this->vsource.'">';
+        } else {
+            $html='<div class="fwvvw-'.$this->vsource.'">';
+        }
        
         if (!$video_details) {
          if ($args['echo'] == true) {
@@ -60,7 +64,11 @@ class FW_vimeo_videowall {
          }
         }
          $html .= $this->get_html($video_details);
-         $html .='<div class="fwclear"></div></div>';
+         if ($this->vtype == 'title' && $video_details) {
+            $html .='</ul>';
+        } else {
+            $html .='<div class="fwclear"></div></div>';
+         }
          if ($args['echo'] == false) {
                  return $html;
          } else {
@@ -90,6 +98,11 @@ class FW_vimeo_videowall {
                     $full_html .= $this->get_video_html ($video);
                 }
                 break;
+            case 'title' :
+                foreach ($video_details as $video) {
+                    $full_html .= $this->get_title_html ($video);
+                }
+                break;
             default :
                  foreach ($video_details as $video) {
                     $full_html .= $this->get_image_html ($video);
@@ -115,6 +128,13 @@ class FW_vimeo_videowall {
          $html_code = '<div id="'.$video->id.'" class="fwvvw_vthumb">';
          $html_code .= '<img src="'.$video->thumbnail_small.'" alt="'.$video->title.'" title="'.$video->title.'" width="'.$this->vwidth.'" />';
          $html_code .= '</div>';
+         return $html_code;
+    }
+
+    public function get_title_html ($video) {
+        $html_code = '<li id="'.$video->id.'" class="fwvvw_vthumb">';
+         $html_code .= '<a href="#" title="'.$video->title.'">'.$video->title.'</a>';
+         $html_code .= '</li>';
          return $html_code;
     }
 

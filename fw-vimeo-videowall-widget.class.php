@@ -1,7 +1,8 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @package fw-vimeo-videowall
+ * @author fairweb
+ * @version 1.1
  */
 
 /**
@@ -103,6 +104,7 @@ class FW_widget_vimeowall extends WP_Widget {
 		<select id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>" class="widefat" style="width:100%;">
 		<option <?php if ( 'image' == $instance['type'] ) echo 'selected="selected"'; ?> value="image"><?php _e('clickable video thumbnails','fwvvw');?></option>
 		<option <?php if ( 'video' == $instance['type'] ) echo 'selected="selected"';?> value="video"><?php _e('playable videos','fwvvw');?></option>
+                <option <?php if ( 'title' == $instance['type'] ) echo 'selected="selected"';?> value="title"><?php _e('list of video titles','fwvvw');?></option>
 		</select>
 		</p>
 
