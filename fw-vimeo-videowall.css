@@ -60,3 +60,13 @@ img.closewindow {
     right:10px;
     cursor:pointer;
 }
+
+/* added in v 1.2 */
+.fwvvw-pagination {
+    clear:both;
+}
+
+.fwvvw-pagination a.fwvvw_current_page {
+    border:#ebebeb 1px solid;
+    font-weight:bold;
+}

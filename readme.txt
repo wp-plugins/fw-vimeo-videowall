@@ -53,8 +53,12 @@ Example : `<?php if (function_exists('fw_vimeowall_display')) { fw_vimeowall_dis
 
 == Screenshots ==
 1. Here are the different ways to use the plugin.
+2. If number of views is greater than 20, the plugin uses pagination
 
 == Changelog ==
+= 1.2 =
+* Corrected W3C issues with id attributes
+* Added pagination feature when number of videos is greater than 20. This is limited by the Vimeo API (Issue reported by weremoose).
 = 1.1 =
 * Added an option to display a list of clickable titles instead of thumbnails or videos (as requested by Tim Johnson)
 * corrected a bug on CSS choice (default plugin CSS or custom CSS in template directory)

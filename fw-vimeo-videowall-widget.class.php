@@ -2,14 +2,8 @@
 /**
  * @package fw-vimeo-videowall
  * @author fairweb
- * @version 1.1
  */
 
-/**
- * Description of fwvimeovideowallwidgetclass
- *
- * @author Fairweb
- */
 class FW_widget_vimeowall extends WP_Widget {
     
     function FW_widget_vimeowall () {

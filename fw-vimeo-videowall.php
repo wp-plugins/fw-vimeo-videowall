@@ -1,14 +1,13 @@
 <?php /**
  * @package fw-vimeo-videowall
  * @author fairweb
- * @version 1.1
  */
 /*
 Plugin Name: fw-vimeo-videowall
 Plugin URI: http://www.fairweb.fr/en/my-wordpress-plugins/fw-vimeo-videowall/
-Description: Displays a user, group, album or channel vimeo videowall with thumbnails or small videos in sidebar or content.
+Description: Displays a user, group, album or channel vimeo videowall with thumbnails or small videos in sidebar or content with pagination if needed.
 Author: fairweb
-Version: 1.1
+Version: 1.2
 Author URI: http://www.fairweb.fr/
 */
 
@@ -37,19 +36,21 @@ function fw_vimeowall_widget() {
 	register_widget( 'FW_widget_vimeowall' );
 }
 
-function fw_vimeowall_display($args='') {
+function fw_vimeowall_display($args='', $wrapper = true) {
     $defaults = array('id' => 'petole',
 		'number' => 4, 'width' => 100,
 		'height' => 100, 'type' => 'image',
-		'source' => 'user', 'echo' => true
+		'source' => 'user', 'paginate' => true, 'page' => 1, 'echo' => true
 	);
 
     $args = wp_parse_args( $args, $defaults );
+    $paginate = '';
     $wall = new FW_vimeo_videowall();
-    $thewall = $wall->video_wall($args);
+    $thewall = $wall->video_wall($args, $wrapper);
+    
     if ($args['echo'] == false ) {
         return $thewall;
-    }
+    } 
 }
 
 function fw_vimeowall_styles() {
