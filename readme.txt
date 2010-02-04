@@ -56,6 +56,8 @@ Example : `<?php if (function_exists('fw_vimeowall_display')) { fw_vimeowall_dis
 2. If number of views is greater than 20, the plugin uses pagination
 
 == Changelog ==
+= 1.2.1 =
+* Corrected bug : limited number of videos displayed did not work since 1.2 (reported by Dan)
 = 1.2 =
 * Corrected W3C issues with id attributes
 * Added pagination feature when number of videos is greater than 20. This is limited by the Vimeo API (Issue reported by weremoose).

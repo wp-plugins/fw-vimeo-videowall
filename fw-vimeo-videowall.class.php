@@ -212,6 +212,7 @@ class FW_vimeo_videowall {
 //echo $this->api_endpoint;
         $endpoint_req = wp_remote_retrieve_body( wp_remote_get($this->api_endpoint));
         $videos = json_decode($endpoint_req );
+        
         //print_r($videos);
         $video_details = array();
 
@@ -222,6 +223,9 @@ class FW_vimeo_videowall {
             if ($i == $nb) { break; }
             $videos_details [] = $videos[$i];
         }*/
+            if ($this->vnumber <= 20) {
+            $videos = array_slice($videos,0, $this->vnumber);
+        }
             $i=0;
              do {
                 $videos_details [] = $videos[$i];
