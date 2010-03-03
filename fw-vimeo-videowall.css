@@ -9,6 +9,7 @@ div.fwvvw_vthumb {
     padding:3px;
     border: #ebebeb 1px solid;
     margin:2px;
+    cursor:pointer;
 }
 
 .fwvvw_nodisplay {
@@ -69,4 +70,8 @@ img.closewindow {
 .fwvvw-pagination a.fwvvw_current_page {
     border:#ebebeb 1px solid;
     font-weight:bold;
+}
+
+.fwvvw-videotitle {
+    font-size:0.8em;
 }

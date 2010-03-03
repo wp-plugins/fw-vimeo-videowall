@@ -30,7 +30,8 @@ class FW_widget_vimeowall extends WP_Widget {
 		'id' => $instance['id'],
 		'number' => $instance['number'],
 		'width' => $instance['width'],
-                'height' => $instance['height']);
+                'height' => $instance['height'],
+                'title' => $instance['title']);
 		
 
 		/* Before widget (defined by themes). */
@@ -62,7 +63,7 @@ class FW_widget_vimeowall extends WP_Widget {
 		$instance['number'] = strip_tags( $new_instance['number'] );
 		$instance['width'] = strip_tags( $new_instance['width'] );
                 $instance['height'] = strip_tags( $new_instance['height'] );
-		
+		$instance['title'] = strip_tags( $new_instance['title'] );
 
 		return $instance;
 	}
@@ -101,6 +102,12 @@ class FW_widget_vimeowall extends WP_Widget {
                 <option <?php if ( 'title' == $instance['type'] ) echo 'selected="selected"';?> value="title"><?php _e('list of video titles','fwvvw');?></option>
 		</select>
 		</p>
+
+                 <p><?php _e('Display video title under thumbnail (irrelevant if you display a list of video titles)','fwvvw');?><br />
+                    <label><input type="radio" name="<?php echo $this->get_field_name( 'title' ); ?>" value="1" <?php if ( 1 == $instance['title'] ) echo 'checked="checked"'; ?> /><?php _e('Yes','fwvvw');?></label>
+                    <br />
+                    <label><input type="radio" name="<?php echo $this->get_field_name( 'title' ); ?>" value="0" <?php if ( 0 == $instance['title'] ) echo 'checked="checked"'; ?> /><?php _e('No','fwvvw');?></label>
+                 </p>
 
                 <p>
 		<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e('Number of videos','fwvvw');?><br /></label>

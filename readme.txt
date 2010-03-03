@@ -17,6 +17,7 @@ Displays a user, group, album or channel vimeo videowall with thumbnails or smal
 
 You may choose to display clickable video thumbnails or titles which will open a window with Vimeo default sized video or small playable videos.
 You may choose how many thumbnails or titles you want to display.
+You may display video title under its thumbnail.
 
 = Localized =
 * English
@@ -48,6 +49,7 @@ Example : `<?php if (function_exists('fw_vimeowall_display')) { fw_vimeowall_dis
 1. number : number of thumbnails to display. Default is 4, a 0 value will display all.
 1. width : thumbnail max width. Default is 100. It has no effet if `type` is set to "title".
 1. height : thumbnail max height. Default is 100. It has no effet if `type` is set to "title".
+1. title : displays the video title under its thumbnail if set to true. Default is false. It has no effet if `type` is set to "title". Consider adding a height CSS attribute to div.fwvvw_vthumb.
 1. echo : if true, displays the videowall, if false return the html without displaying it. Default is true.
 
 
@@ -56,6 +58,9 @@ Example : `<?php if (function_exists('fw_vimeowall_display')) { fw_vimeowall_dis
 2. If number of views is greater than 20, the plugin uses pagination
 
 == Changelog ==
+= 1.3 =
+* Corrected bug : display a single video (reported by Jaryd)
+* Added the video title under thumbnail feature (requested by Jaryd)
 = 1.2.1 =
 * Corrected bug : limited number of videos displayed did not work since 1.2 (reported by Dan)
 = 1.2 =

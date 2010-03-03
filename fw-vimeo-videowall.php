@@ -7,7 +7,7 @@ Plugin Name: fw-vimeo-videowall
 Plugin URI: http://www.fairweb.fr/en/my-wordpress-plugins/fw-vimeo-videowall/
 Description: Displays a user, group, album or channel vimeo videowall with thumbnails or small videos in sidebar or content with pagination if needed.
 Author: fairweb
-Version: 1.2.1
+Version: 1.3
 Author URI: http://www.fairweb.fr/
 */
 
@@ -40,7 +40,7 @@ function fw_vimeowall_display($args='', $wrapper = true) {
     $defaults = array('id' => 'petole',
 		'number' => 4, 'width' => 100,
 		'height' => 100, 'type' => 'image',
-		'source' => 'user', 'paginate' => true, 'page' => 1, 'echo' => true
+		'source' => 'user', 'paginate' => true, 'page' => 1, 'title' => false, 'echo' => true
 	);
 
     $args = wp_parse_args( $args, $defaults );
