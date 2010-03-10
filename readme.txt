@@ -58,6 +58,8 @@ Example : `<?php if (function_exists('fw_vimeowall_display')) { fw_vimeowall_dis
 2. If number of views is greater than 20, the plugin uses pagination
 
 == Changelog ==
+= 1.3.1 =
+* Corrected bug : Widget title always displays 1 (reported by Sherman)
 = 1.3 =
 * Corrected bug : display a single video (reported by Jaryd)
 * Added the video title under thumbnail feature (requested by Jaryd)
