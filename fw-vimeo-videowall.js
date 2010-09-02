@@ -1,5 +1,5 @@
 jQuery(document).ready( function() {
-        jQuery(".fwvvw_vthumb").livequery('click',
+        jQuery(".fwvvw_vthumb").live('click',
 		function() {
 
 			var idreq = jQuery(this).attr('id');
@@ -32,7 +32,7 @@ jQuery(document).ready( function() {
 				});						
 	});
 
-        jQuery("img.closewindow").livequery('click',
+        jQuery("img.closewindow").live('click',
 		function() {
                      
                      jQuery("#fwvvw_full_video").remove();
@@ -40,7 +40,7 @@ jQuery(document).ready( function() {
                 });
 
 
-         jQuery(".fwvvw_pagelink").livequery('click',
+         jQuery(".fwvvw_pagelink").live('click',
 		function() {
 
 			var idreq = jQuery(this).attr('id');

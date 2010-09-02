@@ -165,7 +165,7 @@ class FW_vimeo_videowall {
 
     public function get_image_html ($video) {
          $html_code = '<div id="video_'.$video->id.'" class="fwvvw_vthumb">';
-         $html_code .= '<img src="'.$video->thumbnail_small.'" alt="'.$video->title.'" title="'.$video->title.'" width="'.$this->vwidth.'" />';
+         $html_code .= '<img src="'.$video->thumbnail_small.'" alt="'.$video->title.'" title="'.$video->title.'" style="width: '.$this->vwidth.'px;" />';
          $html_code .= $this->vtitle == true ? '<div class="fwvvw-videotitle" style="width: '.$this->vwidth.'px;">'.$video->title.'</div>' : '';
 
          $html_code .= '</div>';
