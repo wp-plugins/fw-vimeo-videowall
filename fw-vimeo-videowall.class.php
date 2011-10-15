@@ -30,13 +30,13 @@ class FW_vimeo_videowall {
     public function choose_endpoint () {
         global $fwvvw_user_name;
         switch ($this->vsource) {
-            case 'user' : $this->api_endpoint = 'http://www.vimeo.com/api/v2/'.$this->id.'/videos.json?page='.$this->vpage;
+            case 'user' : $this->api_endpoint = 'http://vimeo.com/api/v2/'.$this->id.'/videos.json?page='.$this->vpage;
                             $this->info_endpoint = 'http://vimeo.com/api/v2/'.$this->id.'/info.json'; break;
-            case 'group' : $this->api_endpoint = 'http://www.vimeo.com/api/v2/group/'.$this->id.'/videos.json?page='.$this->vpage;
+            case 'group' : $this->api_endpoint = 'http://vimeo.com/api/v2/group/'.$this->id.'/videos.json?page='.$this->vpage;
                             $this->info_endpoint = 'http://vimeo.com/api/v2/group/'.$this->id.'/info.json'; break;
-            case 'album' : $this->api_endpoint = 'http://www.vimeo.com/api/v2/album/'.$this->id.'/videos.json?page='.$this->vpage;
+            case 'album' : $this->api_endpoint = 'http://vimeo.com/api/v2/album/'.$this->id.'/videos.json?page='.$this->vpage;
                             $this->info_endpoint = 'http://vimeo.com/api/v2/album/'.$this->id.'/info.json'; break;
-            case 'channel' : $this->api_endpoint = 'http://www.vimeo.com/api/v2/channel/'.$this->id.'/videos.json?page='.$this->vpage;
+            case 'channel' : $this->api_endpoint = 'http://vimeo.com/api/v2/channel/'.$this->id.'/videos.json?page='.$this->vpage;
                                 $this->info_endpoint = 'http://vimeo.com/api/v2/channel/'.$this->id.'/info.json'; break;
              case 'video' : $this->api_endpoint = 'http://vimeo.com/api/v2/video/'.$this->id.'.json'; break;
 
@@ -118,7 +118,7 @@ class FW_vimeo_videowall {
         
         $this->vsource = 'video';
         //$this->choose_endpoint ();
-        $this->api_endpoint = 'http://www.vimeo.com/api/oembed.json';
+        $this->api_endpoint = 'http://vimeo.com/api/oembed.json';
         $oembed_url = $this->api_endpoint.'?url='.rawurlencode('http://vimeo.com/'.$this->id).'&maxwidth='.$this->vwidth.'&maxheight='.$this->vheight;       
         $oembed_req = wp_remote_retrieve_body( wp_remote_get($oembed_url));
         $oembed = json_decode($oembed_req);

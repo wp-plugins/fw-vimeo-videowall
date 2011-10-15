@@ -3,7 +3,7 @@ Contributors: fairweb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=11221214
 Tags: video, vimeo, videowall, video widget, video thumbnail
 Requires at least: 2.9
-Tested up to: 3.0.1
+Tested up to: 3.2.1
 Stable tag: '/trunk'
 
 Displays a user, group, album or channel Vimeo videowall with thumbnails or small videos or a list of video titles in sidebar or content.
@@ -58,6 +58,8 @@ Example : `<?php if (function_exists('fw_vimeowall_display')) { fw_vimeowall_dis
 2. If number of views is greater than 20, the plugin uses pagination
 
 == Changelog ==
+= 1.3.3 =
+* Corrected bug : Vimeo api new bug : www.vimeo.com subdomain no longer supported by vimeo API. Use vimeo.com instead of www.vimeo.com.
 = 1.3.2 =
 * Corrected bug : Cross not closing in certain situations (reported by Remk and Eric)
 * Corrected bug : witdh setting not working anymore (reported by Mark)
